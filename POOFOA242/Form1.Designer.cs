@@ -36,26 +36,29 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(325, 105);
+            lblNome.Location = new Point(453, 192);
+            lblNome.Margin = new Padding(4, 0, 4, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(43, 15);
+            lblNome.Size = new Size(65, 25);
             lblNome.TabIndex = 0;
             lblNome.Text = "Nome:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(384, 106);
+            txtNome.Location = new Point(537, 189);
+            txtNome.Margin = new Padding(4, 5, 4, 5);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 23);
+            txtNome.Size = new Size(141, 31);
             txtNome.TabIndex = 1;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
             // btnCliqueMe
             // 
             btnCliqueMe.Enabled = false;
-            btnCliqueMe.Location = new Point(385, 225);
+            btnCliqueMe.Location = new Point(534, 386);
+            btnCliqueMe.Margin = new Padding(4, 5, 4, 5);
             btnCliqueMe.Name = "btnCliqueMe";
-            btnCliqueMe.Size = new Size(75, 23);
+            btnCliqueMe.Size = new Size(107, 38);
             btnCliqueMe.TabIndex = 2;
             btnCliqueMe.Text = "Clique-me";
             btnCliqueMe.UseVisualStyleBackColor = true;
@@ -63,12 +66,13 @@
             // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(btnCliqueMe);
             Controls.Add(txtNome);
             Controls.Add(lblNome);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmPrincipal";
             Text = "Formulário Principal";
             Load += frmPrincipal_Load;
