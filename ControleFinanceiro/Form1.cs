@@ -39,5 +39,30 @@ namespace ControleFinanceiro
             cliente.Cpf = txtCpf.Text;
             lstClientes.Items.Add(cliente.ToString());
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (lstClientes.SelectedIndex != -1) // Verifica se algum item está selecionado
+            {
+                lstClientes.Items.RemoveAt(lstClientes.SelectedIndex); // Remove o item selecionado
+                btnExcluir.Enabled = false; // Desativa o botão de exclusão
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para excluir.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void lstClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void lstClientes_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+                    }
     }
+
+
 }

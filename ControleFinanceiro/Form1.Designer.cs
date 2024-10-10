@@ -5,6 +5,8 @@
         /// <summary>
         ///  Required designer variable.
         /// </summary>
+        /// 
+
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -13,12 +15,14 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
             base.Dispose(disposing);
         }
+
 
         #region Windows Form Designer generated code
 
@@ -40,43 +44,48 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(69, 60);
+            lblNome.Location = new Point(99, 100);
+            lblNome.Margin = new Padding(4, 0, 4, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(43, 15);
+            lblNome.Size = new Size(65, 25);
             lblNome.TabIndex = 0;
             lblNome.Text = "Nome:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(139, 57);
+            txtNome.Location = new Point(199, 95);
+            txtNome.Margin = new Padding(4, 5, 4, 5);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 23);
+            txtNome.Size = new Size(141, 31);
             txtNome.TabIndex = 1;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtCpf
             // 
-            txtCpf.Location = new Point(139, 102);
+            txtCpf.Location = new Point(199, 170);
+            txtCpf.Margin = new Padding(4, 5, 4, 5);
             txtCpf.Name = "txtCpf";
-            txtCpf.Size = new Size(100, 23);
+            txtCpf.Size = new Size(141, 31);
             txtCpf.TabIndex = 3;
             txtCpf.TextChanged += txtCpf_TextChanged;
             // 
             // lblCpf
             // 
             lblCpf.AutoSize = true;
-            lblCpf.Location = new Point(69, 105);
+            lblCpf.Location = new Point(99, 175);
+            lblCpf.Margin = new Padding(4, 0, 4, 0);
             lblCpf.Name = "lblCpf";
-            lblCpf.Size = new Size(31, 15);
+            lblCpf.Size = new Size(46, 25);
             lblCpf.TabIndex = 2;
             lblCpf.Text = "CPF:";
             // 
             // btnInserir
             // 
             btnInserir.Enabled = false;
-            btnInserir.Location = new Point(69, 152);
+            btnInserir.Location = new Point(99, 253);
+            btnInserir.Margin = new Padding(4, 5, 4, 5);
             btnInserir.Name = "btnInserir";
-            btnInserir.Size = new Size(75, 23);
+            btnInserir.Size = new Size(107, 38);
             btnInserir.TabIndex = 4;
             btnInserir.Text = "Inserir";
             btnInserir.UseVisualStyleBackColor = true;
@@ -85,27 +94,31 @@
             // btnExcluir
             // 
             btnExcluir.Enabled = false;
-            btnExcluir.Location = new Point(164, 152);
+            btnExcluir.Location = new Point(234, 253);
+            btnExcluir.Margin = new Padding(4, 5, 4, 5);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(75, 23);
+            btnExcluir.Size = new Size(107, 38);
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // lstClientes
             // 
             lstClientes.FormattingEnabled = true;
-            lstClientes.ItemHeight = 15;
-            lstClientes.Location = new Point(69, 201);
+            lstClientes.ItemHeight = 25;
+            lstClientes.Location = new Point(99, 335);
+            lstClientes.Margin = new Padding(4, 5, 4, 5);
             lstClientes.Name = "lstClientes";
-            lstClientes.Size = new Size(170, 94);
+            lstClientes.Size = new Size(241, 154);
             lstClientes.TabIndex = 6;
+            lstClientes.SelectedIndexChanged += lstClientes_SelectedIndexChanged_1;
             // 
             // frmCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(315, 332);
+            ClientSize = new Size(450, 553);
             Controls.Add(lstClientes);
             Controls.Add(btnExcluir);
             Controls.Add(btnInserir);
@@ -113,6 +126,7 @@
             Controls.Add(lblCpf);
             Controls.Add(txtNome);
             Controls.Add(lblNome);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmCliente";
             Text = "Controle de Clientes";
             Load += Form1_Load;
